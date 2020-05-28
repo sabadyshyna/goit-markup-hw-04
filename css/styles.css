@@ -125,10 +125,14 @@ img {
 }
 
 .address-nav {
+  display: inline-flex;
   margin-left: auto;
 }
 
 .address-nav .link {
+  display: inline-flex;
+  align-items: flex-end;
+
   color: var(--primery-text-color);
 
   font-style: normal;
@@ -147,8 +151,20 @@ img {
   color: var(--accent-color);
 }
 
-.address-img {
-  display: inline-block;
+.address-nav .link:nth-child(1)::before {
+  content: '';
+  background-image: url(../img/email.svg);
+  margin-right: 10px;
+  width: 16px;
+  height: 11px;
+}
+
+.address-nav .link:nth-child(2)::before {
+  content: '';
+  background-image: url(../img/phone.svg);
+  margin-right: 10px;
+  width: 10px;
+  height: 15px;
 }
 
 /* Тело */
@@ -211,6 +227,29 @@ img {
 
 .features .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.features .item::before {
+  display: block;
+  content: '';
+  background-color: var(--secondary-bg-color);
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features .item:nth-child(1)::before {
+}
+.features .item:nth-child(2)::before {
+  background-image: url(../img/punctuality.svg);
+}
+.features .item:nth-child(3)::before {
+  background-image: url(../img/planning.svg);
+}
+.features .item:nth-child(4)::before {
+  background-image: url(../img/technologies.svg);
 }
 
 .features .title {
@@ -334,14 +373,17 @@ img {
   justify-content: space-between;
 }
 
-/* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
 .client .item {
   align-items: center;
   justify-content: space-around;
 }
 
 .client .link {
-  display: block;
+  display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 /* Страница Портфолио */
