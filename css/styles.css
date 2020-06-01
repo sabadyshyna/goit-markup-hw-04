@@ -184,11 +184,13 @@ img {
   margin-right: auto;
   margin-left: auto;
   min-height: 600px;
-  max-width: 1600px;
   text-align: center;
 
   background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)),
     url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
 
 .title-hero {
